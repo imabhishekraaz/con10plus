@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.span {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px;
+    gap: 20px;
+}
+
+.span-1-of-4 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.span-1-of-4 p {
+    border: 1px solid var(--border-color);
+    width: 100%;
+    text-align: center;
+    padding: 7px 0px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: var(--font-weight);
+}
+
+.span-2-of-4 {
+    display: flex;
+    gap: 10px;
+    border: 1px solid var(--border-color);
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.span-3-of-4 {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.span-3-of-4 div {
+    border: 1px solid var(--border-color);
+    padding: 7px 3px;
+}
+
+.span-3-of-4 div input {
+    border: none;
+    outline: none;
+}
+.span-3-of-4 div span {
+    font-size: 14px;
+    font-weight: var(--font-weight);
+}
+
+.tel {
+    font-size: 14px;
+    font-weight: var(--font-weight);
+}
+
+.span-4-of-4 button{
+    width: 120px;
+    height: 40px;
+    outline: none;
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: var(--font-weight);
+    cursor: pointer;
+}
+
