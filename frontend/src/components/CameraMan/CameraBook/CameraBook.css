@@ -21,10 +21,13 @@
     width: 100%;
     text-align: center;
     padding: 7px 0px;
-    background-color: var(--primary-color);
     cursor: pointer;
-    color: var(--text-color);
     font-weight: var(--font-weight);
+}
+
+.activeted {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .span-2-of-4 {

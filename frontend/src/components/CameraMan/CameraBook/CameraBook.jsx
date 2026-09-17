@@ -1,16 +1,38 @@
 import { LocateFixedIcon, LocateIcon, LocationEdit } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 import './CameraBook.css'
 
 const CameraBook = () => {
+  const [isPhoto, setIsPhoto] = useState(true);
+  const [isVideo, setIsVideo] = useState(false)
+
+  const handleCategory = (type)=> {
+    if( type === 'video') {
+      setIsPhoto(false)
+      setIsVideo(true);
+    }
+    
+    if( type === 'photo') {
+      setIsVideo(false)
+      setIsPhoto(true)
+    }
+    // clear garbage
+    return
+  }
   return (
     <>
       <div>
         <div className='span'>
           {/* user Requirement  */}
           <div className='span-1-of-4'>
-            <p>Photography</p>
-            <p>Videography</p>
+            <p
+              className={isPhoto ? 'activeted' : null}
+              onClick={()=>handleCategory('photo')}
+            >Photography</p>
+            <p
+              className={isVideo ? 'activeted' : null}
+              onClick={()=>handleCategory('video')}
+            >Videography</p>
           </div>
           {/* Get the user Location */}
           <div className='span-2-of-4'>
