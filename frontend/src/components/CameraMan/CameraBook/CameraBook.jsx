@@ -1,10 +1,14 @@
 import { LocateFixedIcon, LocateIcon, LocationEdit } from 'lucide-react'
 import React, { useState } from 'react'
 import './CameraBook.css'
+import { useNavigate } from 'react-router-dom';
 
 const CameraBook = () => {
   const [isPhoto, setIsPhoto] = useState(true);
   const [isVideo, setIsVideo] = useState(false)
+
+  // navigate 
+  const navigate = useNavigate();
 
   const handleCategory = (type)=> {
     if( type === 'video') {
@@ -53,7 +57,9 @@ const CameraBook = () => {
             </div>
           </div>
           <div className='span-4-of-4'>
-            <button>Next</button>
+            <button
+              onClick={()=> navigate('/cameraman/details')}
+            >Next</button>
           </div>
 
         </div>

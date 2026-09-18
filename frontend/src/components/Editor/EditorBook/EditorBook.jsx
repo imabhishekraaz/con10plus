@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import './EditorBook.css'
+import { useNavigate } from 'react-router-dom';
 
 const EditorBook = () => {
 
     const [IsLong , setIsLong]  = useState(false);
     const [IsShort, setIsShort] = useState(true);
+
+    // navigation
+    const navigate = useNavigate();
 
     const HandleButtons = (type)=> {
         if (type === 'long') {
@@ -16,7 +20,14 @@ const EditorBook = () => {
             setIsShort(true)
         };
         return 
-    }
+    };
+
+    // const handleNext = ()=> {
+    //     if (IsLong) {
+    //         navigate('')
+    //     }
+    // it will handle the 
+    // }
 
     return (
         <>
@@ -26,11 +37,11 @@ const EditorBook = () => {
                     <p
                         className={IsShort ? 'actived' : null}
                         onClick={()=> HandleButtons('short')}
-                    >Short</p>
+                    >Short form</p>
                     <p
                         className={IsLong ? 'actived' : null}
                         onClick={()=> HandleButtons('long')}
-                    >Long</p>
+                    >Long form</p>
                 </div>
                 {/* shoot timing */}
                 <div className='span-2-of-5'>
@@ -55,7 +66,9 @@ const EditorBook = () => {
                     </div>
                 </div>
                 <div className='span-4-of-5'>
-                    <button>Next</button>
+                    <button
+                        onClick={handleNext}
+                    >Next</button>
                 </div>
 
             </div>
